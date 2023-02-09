@@ -13,7 +13,153 @@ a:hover {
 
 
 /* Custom default button */
-
+ .responsive-image {
+	 width: 100%;
+}
+ .tool-support-animation-container {
+	 position: relative;
+	 margin: 0 auto;
+   padding-top: 200px;
+	 width: 291px;
+	 height: 247px;
+}
+ .tile-slide-down {
+	 transition: opacity 700ms ease-out, transform 700ms ease-out;
+}
+ .tile-slide-down--top {
+	 transform: translate(0, -25px);
+	 opacity: 0;
+}
+ .tile-slide-down--bottom {
+	 transform: translate(0, 0);
+	 opacity: 1;
+}
+ .shadow-grow {
+	 transition: opacity 700ms ease-out, transform 700ms ease-out;
+	 transform-origin: center bottom;
+}
+ .shadow-grow--inactive {
+	 transform: scale(0) translate(0, -10px);
+	 opacity: 0;
+}
+ .shadow-grow--active {
+	 transform: scale(1) translate(0, 0px);
+	 opacity: 1;
+}
+ .deployment-tile-container {
+	 position: relative;
+	 z-index: 2;
+	 cursor: pointer;
+}
+ .deployment-tile-container:hover {
+	 transform: translate(0, -10px);
+}
+ .deployment-tile-container:hover + .deployment-shadow-container .shadow-grow {
+	 transform: scale(0.9) translate(0, -3px);
+}
+ .deployment-tile {
+	 position: absolute;
+	 height: 34px;
+	 width: 89px;
+}
+ .deployment-tile--fake {
+	 top: 0;
+	 left: 7px;
+}
+ .deployment-tile--rake {
+	 top: 73px;
+	 left: 4px;
+}
+ .deployment-tile--grunt {
+	 top: 146px;
+	 left: 5px;
+}
+ .deployment-tile--bamboo {
+	 top: 36px;
+	 left: 68px;
+}
+ .deployment-tile--git {
+	 top: 108px;
+	 left: 68px;
+}
+ .deployment-tile--capistrano {
+	 top: 183px;
+	 left: 68px;
+}
+ .deployment-tile--octopus {
+	 top: 72px;
+	 left: 133px;
+}
+ .deployment-tile--api {
+	 top: 146px;
+	 left: 132px;
+}
+ .deployment-tile--heroku {
+	 top: 35px;
+	 left: 196px;
+}
+ .deployment-tile--konsole {
+	 top: 109px;
+	 left: 195px;
+}
+ .deployment-tile--powershell {
+	 top: 182px;
+	 left: 195px;
+}
+ .deployment-shadow-container {
+	 position: relative;
+	 z-index: 1;
+}
+ .deployment-shadow {
+	 position: absolute;
+	 height: 34px;
+	 width: 89px;
+}
+ .deployment-shadow--fake {
+	 top: 9px;
+	 left: 8px;
+}
+ .deployment-shadow--rake {
+	 top: 82px;
+	 left: 5px;
+}
+ .deployment-shadow--grunt {
+	 top: 155px;
+	 left: 6px;
+}
+ .deployment-shadow--bamboo {
+	 top: 45px;
+	 left: 69px;
+}
+ .deployment-shadow--git {
+	 top: 117px;
+	 left: 69px;
+}
+ .deployment-shadow--capistrano {
+	 top: 191px;
+	 left: 69px;
+}
+ .deployment-shadow--octopus {
+	 top: 81px;
+	 left: 134px;
+}
+ .deployment-shadow--api {
+	 top: 154px;
+	 left: 133px;
+}
+ .deployment-shadow--heroku {
+	 top: 44px;
+	 left: 197px;
+}
+ .deployment-shadow--konsole {
+	 top: 118px;
+	 left: 196px;
+}
+ .deployment-shadow--powershell {
+	 top: 191px;
+	 left: 196px;
+}
+ 
 .btn-secondary,
 .btn-secondary:hover,
 .btn-secondary:focus {
@@ -79,7 +225,7 @@ body {
 
 .cover-heading {
   font-weight: 300;
-  font-size: 400%;
+  font-size: 300%;
 }
 
 .lead { font-size: 200%; }
@@ -95,6 +241,9 @@ body {
 
 .nav-masthead .nav-link {
   padding: .25rem 0;
+  padding-left: .55rem;
+    padding-right: .55rem;
+
   font-weight: bold;
   color: rgba(255, 255, 255, .9);
   background-color: transparent;
